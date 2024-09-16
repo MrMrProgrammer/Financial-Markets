@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Price Prediction</h1>
+        <button id="predictBtn">Get Prediction</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('predictBtn').addEventListener('click', function() {
+            fetch('/predict')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').innerText = data.prediction;
+                });
+        });
+    </script>
+</body>
+</html>

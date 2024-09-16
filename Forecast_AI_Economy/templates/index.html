@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Economic Forecast and Solutions</h1>
+        <form method="post" action="/forecast">
+            <button type="submit">Get Forecast and Solutions</button>
+        </form>
+        {% if forecast %}
+            <h2>Forecast and Solutions</h2>
+            <p>{{ forecast }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

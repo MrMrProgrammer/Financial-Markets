@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollar Prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Dollar Prediction</h1>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2 class="card-title">Current USD Exchange Rate</h2>
+                <p class="card-text">{{ current_fx_rate }}</p>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2 class="card-title">Prediction</h2>
+                <p class="card-text">{{ forecast_text }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
