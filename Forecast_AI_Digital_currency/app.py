@@ -85,7 +85,7 @@ def predict():
     sentiments = analyze_sentiments(news['articles'])
     df = combine_data(prices, sentiments)
     predictions = predict_prices(df)
-    generated_text = generate_text(predictions, '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')
+    generated_text = generate_text(predictions, '')
     return jsonify({'predictions': predictions.tolist(), 'generated_text': generated_text})
 
 if __name__ == '__main__':
